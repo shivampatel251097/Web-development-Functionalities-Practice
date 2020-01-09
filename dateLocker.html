@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>This is POC to hide the edit  button!!</h2>
+
+<h2 id="getdate">The date is </h2>
+<button id="fnButton" type="button" onclick="toHideShowButton()">Click to freeze</button>
+<script>
+	let date_ob = new Date();
+	let date = ("0" + date_ob.getDate()).slice(-2);
+	let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+	const fDate=year+"-"+month+"-"+date
+	document.getElementById("getdate").innerHTML = fDate;
+
+function toHideShowButton()
+{
+	var x=document.getElementById("fnButton");
+	if(date<25){
+		 document.getElementById("fnButton").style.visibility='hidden';
+	}
+	//alert(date);
+}
+
+</script>
+ 
+</body>
+</html>
